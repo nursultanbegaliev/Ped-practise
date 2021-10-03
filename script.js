@@ -6,3 +6,4 @@ button.addEventListener('click', () => {
     quiz.className += ' open-quiz';
     console.log(quiz.className);
 });
+

@@ -1,0 +1,12 @@
+.panel {
+  width: 500px;
+  height: 500px;
+  background-color:green;
+  margin: 5px;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  background-color: bisque;
+}
