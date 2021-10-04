@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +8,70 @@
   <link rel="stylesheet" href="styles.css">
   <title>JavaScript</title>
 </head>
+
 <body>
   <header class="header">
-    <h1>JavaScrpit Practise Tutorial</h1>
+    <h1>JavaScrpit Practice Tutorial</h1>
   </header>
   <div class="container">
     <section class="section">
-      <div class="part">
-        <div class="video">
-          <iframe class="iframe" src="https://www.youtube.com/embed/iwnWHs8CBgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <div class="part" id="intro">
+        <div class="part-heading">
+          <h1>Introduction to JavaScript</h1>
         </div>
-        
-        <div class="quiz">
-          <div class="quiz-header">
-            <p class="quiz-text">Start the quiz</p>
-            <button class="button">Go!</button>
-          </div>
-      </div>
-
-      <div class="part">
         <div class="video">
-          <iframe class="iframe" src="https://www.youtube.com/embed/VHDFPArjecw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         </div>
-        
-        <div class="quiz">
-          <div class="quiz-header">
-            <p class="quiz-text">Start the quiz</p>
-            <button class="button">Go!</button>
-          </div>
+          <iframe class="iframe" src="https://www.youtube.com/embed/Ndl8tNsRugA" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="quiz"></div>
       </div>
 
-      
-        
+      <div class="part" id="codewars-practice">
+        <div class="part-heading">
+          <h1>Practice on codewars.com</h1>
+        </div>
+        <div class="video">
+          <iframe class="iframe" src="https://www.youtube.com/embed/VHDFPArjecw" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="quiz"></div>
       </div>
+
+      <div class="part" id="interactivity">
+        <div class="part-heading">
+          <h1>Adding simple interactivity with JavaScript</h1>
+        </div>
+        <div class="video">
+          <iframe class="iframe" src="https://www.youtube.com/embed/cSOC02FUEkQ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="quiz"></div>
+      </div>
+
     </section>
     <aside class="aside">
-      <p>Here will be topics navigation</p>
+      <h3>Navigate over video tutorials</h3> <br/>
+      
+      <ul>
+        <li><a href="#intro">Introduction to JavaScript</a> <br/></li>
+        <li><a href="#codewars-practice">Practise JS on codewars.com. Array problem</a> <br/></li>
+        <li><a href="#interactivity">Adding simple interactivity with JS</a></li>
+      </ul>
+
+      <h3>Ready Projects</h3>
+      <a href="Intro-to-js/board_sources/index.html">Board Game</a>
+      
     </aside>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>

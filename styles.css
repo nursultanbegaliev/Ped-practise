@@ -4,17 +4,23 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color:rgb(175, 240, 240)
+}
+
 /* Header */
 .header {
   width: 100%;
-  height: 8vh;
+  height: 10vh;
   background: rgb(68, 133, 158);
+  padding-left: 10px;
 }
 
 /* Body container*/
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  background-color:rgb(217, 133, 228);
   /* margin: 5px 20px 5px 20px; */
   /*padding: 2% 5% 2% 5%; */
   display: flex;
@@ -23,33 +29,43 @@
 /* Section */
 .section {
   width: 80%;
-  height: 200vh;
-  background: rgb(179, 49, 77);
+  background: rgb(56, 54, 54);
   margin: 10px 20px 10px 20px;
 }
 /* inside of Section */
 
+
+/* Content */
+.part {
+  width: 90%;
+  height: 80vh;
+  border: solid 5px blueviolet;
+  margin: 10px;
+  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 /* Video */
 .video {
+  margin: 10px;
   width: 80%;
-  height: 40vh;
+  height: 50%;
   background: yellow;
-  margin: 10px 20px 10px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .iframe {
-  width: 80%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 
 /* inside of Quiz */
 .quiz {
   width: 80%;
-  height: 10vh;
+  height: 40%;
   background: white;
   margin: 10px 20px 10px 20px;
   
@@ -81,10 +97,14 @@
 }
 
 
-/* Aside*/
+/* Aside*/ 
 .aside {
-  width: 20%;
-  height: 100%;
-  background: rgb(101, 179, 101);
-  margin: 10px 10px 10px 20px;
+  width: 25%;
+  height: 40vh;
+  position: sticky;
+  top: 0; 
+  left: -10;
+  background-color: rgb(101, 179, 101);
+  text-align: left;
+  vertical-align: baseline;
 }
