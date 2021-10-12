@@ -61,6 +61,10 @@ body {
   height: 100%;
 }
 
+.part-heading {
+  margin-top: 5px;
+  /* background-color:rgb(193, 221, 221); */
+}
 
 /* inside of Quiz */
 .quiz {
@@ -154,6 +158,9 @@ body {
   display: none;
 }
 
+.questions {
+  margin-bottom: 20px;
+}
 
 
 
@@ -176,4 +183,13 @@ body {
   background-color: rgb(101, 179, 101);
   text-align: left;
   vertical-align: baseline;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h3 {
+  margin-top: 5px;
 }

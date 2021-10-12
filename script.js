@@ -80,37 +80,86 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'In which HTML tag do we put JavaScript?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'link', correct: false },
+      { text: 'javascript', correct: false },
+      { text: 'script', correct: true},
+      { text: 'js', content: false}
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: 'Where is more better way to insert our JavaScript?',
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: '<body> section', correct: true },
+      { text: '<head> section', correct: false },
+      { text: 'we have to write inline scripts', correct: false },
+      { text: 'no correct choice', correct: false }
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'How to create function in JavaScript?',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'function myFunc()', correct: true },
+      { text: 'function: myFunc', correct: false },
+      { text: 'def myFunc', correct: false },
+      { text: 'myFunc = function()', correct: false }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'How do we call a function named "myFunc"?',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: 'public static void myFunc', correct: false },
+      { text: 'myFunc()', correct: true },
+      { text: 'call myFunc()', correct: false},
+      { text: 'new myFunc()', correct: false}
+    ]
+  },
+  {
+    question: 'How can you add comments in JavaScript?',
+    answers: [
+      { text: '// comment', correct: true },
+      { text: '<!-- comment -->', correct: false },
+      { text: '# comment', correct: false},
+      { text: '* comment *', correct: false}
+    ]
+  },
+  {
+    question: 'Which operator is used to compare exact values?',
+    answers: [
+      { text: 'isEqual()', correct: false },
+      { text: '=', correct: false },
+      { text: '==', correct: false},
+      { text: '===', correct: true}
+    ]
+  },
+  {
+    question: `What is the result of "console.log(1 + '2')"`,
+    answers: [
+      { text: 'SyntaxError', correct: false },
+      { text: '3', correct: false },
+      { text: '12', correct: true},
+      { text: 'NaN', correct: false}
+    ]
+  },
+  {
+    question: `JavaScript is script version of Java?`,
+    answers: [
+      { text: 'No', correct: true },
+      { text: 'Yes', correct: false }
+      
+    ]
+  },
+  {
+    question: `How to output "Hello!" in the console?`,
+    answers: [
+      { text: 'System.out.println("Hello!")', correct: false },
+      { text: 'print("Hello!")', correct: false },
+      { text: 'alert("Hello!")', correct: false },
+      { text: 'console.log("Hello!")', correct: true }
     ]
   }
+
 ]
 
 
@@ -188,10 +237,150 @@ function selectAnswer2(e) {
 // 2 Quiz questions
 const questions2 = [
   {
-    question: 'What is 100 + 100?',
+    question: 'In which HTML tag do we put JavaScript?',
     answers: [
-      { text: '100100', correct: false },
-      { text: '200', correct: true }
+      { text: 'link', correct: false },
+      { text: 'javascript', correct: false },
+      { text: 'script', correct: true},
+      { text: 'js', content: false}
+    ]
+  },
+  {
+    question: 'Where is more better way to insert our JavaScript?',
+    answers: [
+      { text: '<body> section', correct: true },
+      { text: '<head> section', correct: false },
+      { text: 'we have to write inline scripts', correct: false },
+      { text: 'no correct choice', correct: false }
+    ]
+  },
+  {
+    question: 'How to create function in JavaScript?',
+    answers: [
+      { text: 'function myFunc()', correct: true },
+      { text: 'function: myFunc', correct: false },
+      { text: 'def myFunc', correct: false },
+      { text: 'myFunc = function()', correct: false }
+    ]
+  },
+  {
+    question: 'How do we call a function named "myFunc"?',
+    answers: [
+      { text: 'public static void myFunc', correct: false },
+      { text: 'myFunc()', correct: true },
+      { text: 'call myFunc()', correct: false},
+      { text: 'new myFunc()', correct: false}
+    ]
+  },
+  {
+    question: 'How can you add comments in JavaScript?',
+    answers: [
+      { text: '// comment', correct: true },
+      { text: '<!-- comment -->', correct: false },
+      { text: '# comment', correct: false},
+      { text: '* comment *', correct: false}
+    ]
+  },
+  {
+    question: 'Which operator is used to compare exact values?',
+    answers: [
+      { text: 'isEqual()', correct: false },
+      { text: '=', correct: false },
+      { text: '==', correct: false},
+      { text: '===', correct: true}
+    ]
+  },
+  {
+    question: `What is the result of "console.log(1 + '2')"`,
+    answers: [
+      { text: 'SyntaxError', correct: false },
+      { text: '3', correct: false },
+      { text: '12', correct: true},
+      { text: 'NaN', correct: false}
+    ]
+  }
+];
+
+
+// Third quiz
+const startButton3 = document.getElementById('start-btn3')
+const nextButton3 = document.getElementById('next-btn3')
+const questionContainerElement3 = document.getElementById('question-container3')
+const questionElement3 = document.getElementById('question3')
+const answerButtonsElement3 = document.getElementById('answer-buttons3')
+
+let shuffledQuestions3, currentQuestionIndex3 = 0;
+
+// 3 Quiz
+startButton3.addEventListener('click', startGame3);
+nextButton3.addEventListener('click', () => {
+  currentQuestionIndex3++;
+  setNextQuestion3();
+});
+
+// 3 StartGame function
+function startGame3() {
+  startButton3.classList.add('hide')
+  shuffledQuestions3 = questions3.sort(() => Math.random() - .5)
+  currentQuestionIndex3 = 0
+  questionContainerElement3.classList.remove('hide')
+  setNextQuestion3();
+}
+
+// 3 setNextQuestion function
+function setNextQuestion3() {
+  resetState3()
+  showQuestion3(shuffledQuestions3[currentQuestionIndex3])
+}
+
+// 3 showQuestion function
+function showQuestion3(question) {
+  questionElement3.innerText = question.question
+  question.answers.forEach(answer => {
+    const button = document.createElement('button')
+    button.innerText = answer.text
+    button.classList.add('btn')
+    if (answer.correct) {
+      button.dataset.correct = answer.correct
+    }
+    button.addEventListener('click', selectAnswer3)
+    answerButtonsElement3.appendChild(button)
+  })
+}
+
+// 3 resetState function
+function resetState3() {
+  clearStatusClass(document.body)
+  nextButton.classList.add('hide')
+  while (answerButtonsElement3.firstChild) {
+    answerButtonsElement3.removeChild(answerButtonsElement3.firstChild)
+  }
+}
+
+// 3 selectAnswer function
+function selectAnswer3(e) {
+  const selectedButton = e.target
+  const correct = selectedButton.dataset.correct
+  setStatusClass(document.body, correct)
+  Array.from(answerButtonsElement3.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct)
+  })
+  if (shuffledQuestions3.length > currentQuestionIndex3 + 1) {
+    nextButton3.classList.remove('hide')
+  } else {
+    startButton3.innerText = 'Restart'
+    startButton3.classList.remove('hide')
+  }
+}
+
+const questions3 = [
+  {
+    question: 'In which HTML tag do we put JavaScript?',
+    answers: [
+      { text: 'link', correct: false },
+      { text: 'javascript', correct: false },
+      { text: 'script', correct: true},
+      { text: 'js', content: false}
     ]
   }
 ];
