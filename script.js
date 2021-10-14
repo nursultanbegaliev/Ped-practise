@@ -237,66 +237,52 @@ function selectAnswer2(e) {
 // 2 Quiz questions
 const questions2 = [
   {
-    question: 'In which HTML tag do we put JavaScript?',
+    question: `What will be the result of this code?
+                function addNums() {
+                  let res = 0;
+                  for(let i = 0; i < 5; i++) {
+                    res += i;
+                  }
+                  return res;
+                }
+              `,
     answers: [
-      { text: 'link', correct: false },
-      { text: 'javascript', correct: false },
-      { text: 'script', correct: true},
-      { text: 'js', content: false}
+      { text: '0', correct: false },
+      { text: '5', correct: false },
+      { text: '10', correct: true},
+      { text: '11', content: false}
     ]
   },
   {
-    question: 'Where is more better way to insert our JavaScript?',
+    question: `Will we be able to call function with function declaration above it?`,
     answers: [
-      { text: '<body> section', correct: true },
-      { text: '<head> section', correct: false },
-      { text: 'we have to write inline scripts', correct: false },
-      { text: 'no correct choice', correct: false }
+      {text: 'Yes', correct: true},
+      {text: 'NO', correct: false}
     ]
   },
   {
-    question: 'How to create function in JavaScript?',
+    question: `We can say that ECMAScript and JavaScript are the same?`,
     answers: [
-      { text: 'function myFunc()', correct: true },
-      { text: 'function: myFunc', correct: false },
-      { text: 'def myFunc', correct: false },
-      { text: 'myFunc = function()', correct: false }
+      {text: 'Yes', correct: true},
+      {text: 'No', correct: false}
     ]
   },
   {
-    question: 'How do we call a function named "myFunc"?',
+    question: `Choose the not appropriate one:`,
     answers: [
-      { text: 'public static void myFunc', correct: false },
-      { text: 'myFunc()', correct: true },
-      { text: 'call myFunc()', correct: false},
-      { text: 'new myFunc()', correct: false}
+      {text: 'codewars.com', correct: false},
+      {text: 'hackerrank.com', correct: false},
+      {text: 'leetcode.com', correct: false},
+      {text: 'tiktok.com', correct: true}
     ]
   },
   {
-    question: 'How can you add comments in JavaScript?',
+    question: `What is the difference between map() and forEach() methods?`,
     answers: [
-      { text: '// comment', correct: true },
-      { text: '<!-- comment -->', correct: false },
-      { text: '# comment', correct: false},
-      { text: '* comment *', correct: false}
-    ]
-  },
-  {
-    question: 'Which operator is used to compare exact values?',
-    answers: [
-      { text: 'isEqual()', correct: false },
-      { text: '=', correct: false },
-      { text: '==', correct: false},
-      { text: '===', correct: true}
-    ]
-  },
-  {
-    question: `What is the result of "console.log(1 + '2')"`,
-    answers: [
-      { text: 'SyntaxError', correct: false },
-      { text: '3', correct: false },
-      { text: '12', correct: true},
-      { text: 'NaN', correct: false}
+      {text: 'map() returns new array', correct: true},
+      {text: 'map() is not method', correct: false},
+      {text: 'forEach and map are the same', correct: false},
+      {text: 'forEach() is not a method', correct: false}
     ]
   }
 ];
