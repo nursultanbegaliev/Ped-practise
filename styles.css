@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color:rgb(175, 240, 240)
+  background-color: rgb(175, 240, 240);
 }
 
 /* Header */
@@ -20,7 +20,7 @@ body {
 .container {
   width: 100%;
   height: 100%;
-  background-color:rgb(127, 120, 128);
+  background-color: rgb(127, 120, 128);
   /* margin: 5px 20px 5px 20px; */
   /*padding: 2% 5% 2% 5%; */
   display: flex;
@@ -34,19 +34,17 @@ body {
 }
 /* inside of Section */
 
-
 /* Content */
 .part {
   width: 90%;
   height: 80vh;
   border: solid 5px blueviolet;
   margin: 10px;
-  background-color: yellowgreen;
+  background-color: rgb(190, 190, 190);
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-
 
 /* Video */
 .video {
@@ -72,10 +70,7 @@ body {
   height: 50%;
   background: white;
   margin: 10px 20px 10px 20px;
-  
 }
-
-
 
 :root {
   --hue-neutral: 200;
@@ -112,8 +107,6 @@ body {
   box-shadow: 0 0 10px 2px;
 }
 
-
-
 .btn {
   --hue: var(--hue-neutral);
   border: 1px solid hsl(var(--hue), 100%, 30%);
@@ -142,7 +135,8 @@ body {
   --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
   margin-top: 5px;
   font-weight: bold;
   padding: 2px 5px;
@@ -162,23 +156,18 @@ body {
   margin-bottom: 20px;
 }
 
-
-
-
-
 /* Button */
 .button {
   font-size: 1.5rem;
   margin-right: 3%;
 }
 
-
-/* Aside*/ 
+/* Aside*/
 .aside {
   width: 25%;
   height: 40vh;
   position: sticky;
-  top: 0; 
+  top: 0;
   left: -10;
   background-color: rgb(101, 179, 101);
   text-align: left;
